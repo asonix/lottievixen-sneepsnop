@@ -341,7 +341,7 @@ dependencies = [
 [[package]]
 name = "mammut"
 version = "0.9.0"
-source = "git+https://github.com/asonix/Mammut.git#0f313516c9630f067a9d74220986495ec10017b7"
+source = "git+https://github.com/asonix/Mammut.git#21fd4041902eb13212e4930f73aa7ec79c769b4d"
 dependencies = [
  "chrono 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "reqwest 0.8.2 (registry+https://github.com/rust-lang/crates.io-index)",
