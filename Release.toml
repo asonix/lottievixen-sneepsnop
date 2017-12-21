@@ -1,0 +1,13 @@
+release_path = "/home/asonix/Development/rust/releases"
+included_files = ["ACKNOWLEDGEMENTS"]
+[[config.Linux.amd64]]
+libs = []
+
+[config.Linux.amd64.env]
+
+[[config.Linux.armv7h]]
+libs = ["/usr/arm-linux-gnueabihf/lib", "/home/asonix/Development/armeabi/lib"]
+
+[config.Linux.armv7h.env]
+OPENSSL_DIR = "/home/asonix/Development/armeabi"
+PKG_CONFIG_ALLOW_CROSS = "1"
