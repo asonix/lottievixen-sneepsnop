@@ -46,7 +46,8 @@ fn main_loop(mastodon: Mastodon) -> mammut::Result<()> {
         let status = StatusBuilder::new(cow);
         mastodon.new_status(status)?;
 
-        sleep(Duration::from_secs(60 * 30));
+        // one post every hour
+        sleep(Duration::from_secs(60 * 60));
     }
 }
 
