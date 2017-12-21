@@ -13,7 +13,7 @@ use std::io;
 use std::thread::sleep;
 use std::time::Duration;
 
-const GOOD_WORDS: [&'static str; 11] = [
+const GOOD_WORDS: [&str; 11] = [
     "great",
     "fantastic",
     "the best",
@@ -27,7 +27,7 @@ const GOOD_WORDS: [&'static str; 11] = [
     "on mastodon",
 ];
 
-fn main_loop(mastodon: Mastodon) -> mammut::Result<()> {
+fn main_loop(mastodon: &Mastodon) -> mammut::Result<()> {
     loop {
         let between: Range<usize> = Range::new(0, 11);
         let mut rng = rand::thread_rng();
@@ -98,11 +98,7 @@ fn run() -> mammut::Result<()> {
         }
     };
 
-    println!("Access Token: {}", mastodon.data.access_token);
-
-    println!("Created access token");
-
-    main_loop(mastodon)?;
+    main_loop(&mastodon)?;
 
     Ok(())
 }
